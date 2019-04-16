@@ -38,7 +38,52 @@ const LogoTitleWrapper = styled.div`
 `;
 
 const LogoContainer = styled.div`
-  margin 10px;
+  margin: 10px;
+`;
+
+const Button = styled.a`
+  background: #303eff;
+	color: white;
+	text-decoration: none;
+	font-family: 'Merienda', cursive;
+	text-align: center;
+	:visited{
+		color: white;
+	}
+	-moz-box-shadow:    -4px 2px 10px 1px black;
+  -webkit-box-shadow: -4px 2px 10px 1px black;
+  box-shadow:         -4px 2px 10px 1px black;
+`;
+
+const SignInButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* background: green; */
+  margin-top: 90px;
+  height: 30%;
+  justify-content: space-between;
+  /* height: */
+`;
+
+const SignInButton = styled(Button)`
+  height: 37px;
+  width: 50%;
+`;
+
+const SecondParentSignInButton = styled(Button)`
+  
+`;
+
+const SignUpButtonWrapper = styled.div`
+  
+`;
+
+const SignUpButton = styled(Button)`
+  
+`;
+
+const BusinessSignUpButton = styled(Button)`
+  
 `;
 
 class Login extends Component {
@@ -56,6 +101,22 @@ class Login extends Component {
           </LogoContainer>
           Disney Parent App
         </LogoTitleWrapper>
+        {/* <SignInButtonWrapper>
+          <SignInButton>
+            Sign In
+          </SignInButton>
+          <SecondParentSignInButton>
+            Second Parent Sign In
+          </SecondParentSignInButton>
+        </SignInButtonWrapper>
+        <SignUpButtonWrapper>
+          <SignUpButton>
+            No Account? Sign up Here
+          </SignUpButton>
+          <BusinessSignUpButton>
+            I'm A Business Owner
+          </BusinessSignUpButton>
+        </SignUpButtonWrapper> */}
       </LoginContainer>
     );
   }
