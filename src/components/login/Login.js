@@ -1,28 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
+import HelpButton from '../common/HelpButton';
+
 const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px 8px;
   height: 100vh;
   /* background-image: */
-`;
-
-const HelpButton = styled.a`
-	background: #303eff;
-	padding: 2px 10px;
-	border-radius: 5px;
-	width: 54px;
-	height: 20px;
-	font-size: 14px;
-	color: white;
-	text-decoration: none;
-	font-family: 'Merienda', cursive;
-	text-align: center;
-	:visited{
-		color: white;
-	}
 `;
 
 const LogoTitleWrapper = styled.div`
@@ -51,7 +37,7 @@ class Login extends Component {
     }
     return (
       <LoginContainer>
-        <HelpButton>Help</HelpButton>
+        <HelpButton/>
         <LogoTitleWrapper>
           <Logo />
           Disney Parent App
