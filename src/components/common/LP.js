@@ -30,7 +30,7 @@ class Login extends Component {
           </SecondParentSignInButton>
         </SignInButtonWrapper>
         <SignUpButtonWrapper>
-          <SignUpButton>
+          <SignUpButton to="/signup">
             No Account? Sign up Here
           </SignUpButton>
           <BusinessSignUpButton>
