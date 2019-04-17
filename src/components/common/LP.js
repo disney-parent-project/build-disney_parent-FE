@@ -76,10 +76,11 @@ const LogoTitleWrapper = styled.div`
   flex-direction: column;
   font-family: 'Merienda', cursive;
   color: #ffcc00;
+  margin-bottom: 20px;
 `;
 
 const LogoContainer = styled.div`
-  margin: 30px;
+  margin: 30px 10px 10px 10px;
 `;
 
 const RouterLink = styled(Link)`
@@ -105,22 +106,29 @@ const SignInButtonWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-  height: 30%;
+  height: 60%;
   justify-content: space-between;
-  height: 100%;
 `;
 
 const SignInButton = styled(RouterLink)`
-  height: 37px;
+  height: 25px;
   width: 58.93%;
   font-weight: bold;
   font-size: 20px;
+  background:
+      linear-gradient(to right,
+        #303eff, 
+        #FFF 300%);
 `;
 
 const SecondParentSignInButton = styled(RouterLink)`
-  height: 37px;
+  height: 25px;
   width: 58.93%;
   font-size: 14px;
+  background:
+      linear-gradient(to left,
+        #303eff, 
+        #FFF 300%);
 `;
 
 const SignUpButtonWrapper = styled.div`
@@ -132,12 +140,12 @@ const SignUpButtonWrapper = styled.div`
 
 const SignUpButton = styled(RouterLink)`
   width: 48%;
-  font-size: 10px;
+  font-size: 9px;
   height: 20px;
 `;
 
 const BusinessSignUpButton = styled(RouterLink)`
   width: 48%;
-  font-size: 10px;
+  font-size: 9px;
   height: 20px;
 `;
