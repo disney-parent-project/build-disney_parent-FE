@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
+import axios from 'axios';
 export default class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      email : '',
-      password: ''
+      username : 'testm@test.com',
+      password: '123123123'
     };
   }
 
@@ -19,15 +19,13 @@ export default class Login extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     // API call to BE to login to the app
-    fetch('https://disney-parent-api.herokuapp.com/api/parents/login', {
-      method: 'POST',
-      body: JSON.stringify(this.state),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+    axios.post('https://disney-parent-api.herokuapp.com/api/parents/login', {
+      username: this.state.username,
+      password: this.state.password
     })
     .then(res => {
       if (res.status === 200) {
+        localStorage.setItem('jwt_token', `${res.data.token}`)
         this.props.history.push('/');
       } else {
         const error = new Error(res.error);
@@ -45,10 +43,10 @@ export default class Login extends Component {
       <form onSubmit={this.onSubmit}>
         <h1>Login Below!</h1>
         <input
-          type="email"
-          name="email"
-          placeholder="Enter email"
-          value={this.state.email}
+          type="username"
+          name="username"
+          placeholder="Enter username"
+          value={this.state.username}
           onChange={this.handleInputChange}
           required
         />
