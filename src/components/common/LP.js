@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
-import HelpButton from './HelpButton';
 import login_background from '../../assets/login_bg.jpg';
 
 class Login extends Component {
@@ -15,7 +14,7 @@ class Login extends Component {
 
     return (
       <LoginContainer>
-        <HelpButton/>
+        <HelpLink href="/help">Help</HelpLink>
         <LogoTitleWrapper>
           <LogoContainer>
             <Logo />
@@ -75,6 +74,7 @@ const LogoTitleWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   font-family: 'Merienda', cursive;
+  font-size: 1.5rem;
   color: #ffcc00;
   margin-bottom: 20px;
 `;
@@ -92,7 +92,7 @@ const RouterLink = styled(Link)`
 	text-decoration: none;
 	font-family: 'Merienda', cursive;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 2px;
 	:visited{
 		color: white;
 	}
@@ -111,10 +111,10 @@ const SignInButtonWrapper = styled.div`
 `;
 
 const SignInButton = styled(RouterLink)`
-  height: 25px;
+  height: 22%;
   width: 58.93%;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 100%;
   background:
       linear-gradient(to right,
         #303eff, 
@@ -122,9 +122,9 @@ const SignInButton = styled(RouterLink)`
 `;
 
 const SecondParentSignInButton = styled(RouterLink)`
-  height: 25px;
+height: 22%;
   width: 58.93%;
-  font-size: 14px;
+  font-size: 80%;
   background:
       linear-gradient(to left,
         #303eff, 
@@ -148,4 +148,21 @@ const BusinessSignUpButton = styled(RouterLink)`
   width: 48%;
   font-size: 9px;
   height: 20px;
+`;
+
+const HelpLink = styled(RouterLink)`
+	width: 15%;
+	height: 8%;
+	font-size: .8rem;
+  padding: auto;
+	color: white;
+	text-decoration: none;
+	font-family: 'Merienda', cursive;
+	text-align: center;
+	:visited{
+		color: white;
+	}
+	-moz-box-shadow:    2px 1px 6px black;
+  -webkit-box-shadow: 2px 1px 6px black;
+  box-shadow:         2px 1px 6px black;
 `;
