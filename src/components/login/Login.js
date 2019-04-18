@@ -4,8 +4,8 @@ export default class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      username : 'testm@test.com',
-      password: '123123123'
+      username : '',
+      password: ''
     };
   }
 
@@ -24,9 +24,10 @@ export default class Login extends Component {
       password: this.state.password
     })
     .then(res => {
-      if (res.status === 200) {
+      if (res.status === 200 || res.status === 204) {
         localStorage.setItem('jwt_token', `${res.data.token}`)
-        this.props.history.push('/');
+        // this.props.authenticate();
+        this.props.history.push('/parentprofile');
       } else {
         const error = new Error(res.error);
         throw error;
