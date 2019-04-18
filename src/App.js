@@ -4,6 +4,7 @@ import Login from './components/login/Login';
 import ParentSignup from './components/signup/ParentSignup';
 import BusinessSignup from './components/signup/BusinessSignup';
 import ParentProfile from './components/profile/ParentProfile';
+import Requests from './components/requests/Requests';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path='/signup' exact={true} component={ParentSignup}/>
           <Route path='/parentprofile' exact={true} component={ParentProfile}/>
           <Route path='/business_signup' exact={true} component={BusinessSignup}/>
+          <Route path='/requests' exact={true} component={Requests}/>
           <Redirect to='/' />
         </Switch>
       </Router>
