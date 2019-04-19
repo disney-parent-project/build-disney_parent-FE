@@ -13,7 +13,7 @@ class Login extends Component {
     }
 
     return (
-      <LoginContainer>
+      <LPContainer>
         <HelpLink href="/help">Help</HelpLink>
         <LogoTitleWrapper>
           <LogoContainer>
@@ -37,14 +37,14 @@ class Login extends Component {
             I'm A Business Owner
           </BusinessSignUpButton>
         </SignUpButtonWrapper>
-      </LoginContainer>
+      </LPContainer>
     );
   }
 }
 
 export default Login;
 
-const LoginContainer = styled.div`
+const LPContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px 8px;
