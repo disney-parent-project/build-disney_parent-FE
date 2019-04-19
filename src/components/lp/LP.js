@@ -33,7 +33,7 @@ class Login extends Component {
           <SignUpButton to="/signup">
             No Account? Sign up Here
           </SignUpButton>
-          <BusinessSignUpButton>
+          <BusinessSignUpButton to="/business_signup">
             I'm A Business Owner
           </BusinessSignUpButton>
         </SignUpButtonWrapper>
