@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
+
 export default class ParentSignup extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
+	state = {
 		fullName: '',
-		username : 'test',
-		password: 'test',
-		passwordConfirm: 'test',
+		username : '',
+		password: '',
+		passwordConfirm: '',
 		personCount: '',
 		adultCount: '',
 		childCount: '',
 		favoriteParks: '',
 		secondSignupPage: 0
-    };
-  }
+	}
 
   handleInputChange = (event) => {
     const { value, name } = event.target;
