@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
-import login_background from '../../assets/login_bg.jpg';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import HelpMenu from '../common/HelpMenu'
+import logo from '../../assets/logo.png'
+import login_background from '../../assets/login_bg.jpg'
 
 class Login extends Component {
   render() {
 
     function Logo() {
       // Import result is the URL of your image
-      return <img src={logo} alt="Logo" />;
+      return <img src={logo} alt="Logo" />
     }
 
     return (
       <LPContainer>
-        <HelpLink href="/help">Help</HelpLink>
+        <HelpMenu/>
         <LogoTitleWrapper>
           <LogoContainer>
             <Logo />
@@ -150,19 +151,3 @@ const BusinessSignUpButton = styled(RouterLink)`
   height: 20px;
 `;
 
-const HelpLink = styled(RouterLink)`
-	width: 15%;
-	height: 8%;
-	font-size: .8rem;
-  padding: auto;
-	color: white;
-	text-decoration: none;
-	font-family: 'Merienda', cursive;
-	text-align: center;
-	:visited{
-		color: white;
-	}
-	-moz-box-shadow:    2px 1px 6px black;
-  -webkit-box-shadow: 2px 1px 6px black;
-  box-shadow:         2px 1px 6px black;
-`;
