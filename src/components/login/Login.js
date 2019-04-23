@@ -3,21 +3,21 @@ import axios from 'axios';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import largeMickeyEars from '../../assets/large_mickey_ears.png';
+import HelpMenu from '../common/HelpMenu'
 
 export default class Login extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      username : '',
-      password: ''
-    };
-  }
+  state = {
+    username : '',
+    password: ''
+  };
 
   handleInputChange = (event) => {
+
     const { value, name } = event.target;
     this.setState({
       [name]: value
     });
+    
   }
 
   onSubmit = (event) => {
@@ -47,6 +47,7 @@ export default class Login extends Component {
 
     return (
       <LoginContainer className='login_container'>
+      <HelpMenu/>
         <SigninForm className='signin_form' onSubmit={this.onSubmit}>
             <LoginHeader className='login_header'>Sign In</LoginHeader>
           <FormContainer className='form_container'>
@@ -85,7 +86,7 @@ const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px 8px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 `;
 
@@ -114,7 +115,6 @@ const FormContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   height: 25%;
 `;
 
@@ -132,7 +132,6 @@ const InputContainer = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
 `;
 
 const StyledInput = styled.input`
