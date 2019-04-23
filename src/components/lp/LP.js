@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import HelpMenu from '../common/HelpMenu'
-import logo from '../../assets/logo.png'
-import login_background from '../../assets/login_bg.jpg'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import HelpMenu from '../common/HelpMenu';
+import logo from '../../assets/logo.png';
+import LPBackground from '../../assets/lp_bg.jpg';
 
-class Login extends Component {
+export default class Login extends Component {
   render() {
 
     function Logo() {
@@ -23,18 +23,18 @@ class Login extends Component {
           Disney Parent App
         </LogoTitleWrapper>
         <SignInButtonWrapper>
-          <SignInButton to="/login">
+          <SignInButton to='/login'>
             Sign In
           </SignInButton>
-          <SecondParentSignInButton>
+          <SecondParentSignInButton to='/secondParentLogin'>
             Second Parent Sign In
           </SecondParentSignInButton>
         </SignInButtonWrapper>
         <SignUpButtonWrapper>
-          <SignUpButton to="/signup">
+          <SignUpButton to='/signup'>
             No Account? Sign up Here
           </SignUpButton>
-          <BusinessSignUpButton to="/business_signup">
+          <BusinessSignUpButton to='/business_signup'>
             I'm A Business Owner
           </BusinessSignUpButton>
         </SignUpButtonWrapper>
@@ -43,13 +43,12 @@ class Login extends Component {
   }
 }
 
-export default Login;
-
 const LPContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px 8px;
   height: 100vh;
+  width: 100vw;
   ::after {
     content: "";
     background:
@@ -57,7 +56,7 @@ const LPContainer = styled.div`
         rgba(0, 0, 0, 0.54), 
         rgba(0, 0, 0, 0.54)
       ),
-      url('${login_background}');
+      url('${LPBackground}');
     background-size: cover;
     background-position: center;
     top: 0;
@@ -65,7 +64,7 @@ const LPContainer = styled.div`
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;   
+    z-index: -1;
   };
 `;
 
