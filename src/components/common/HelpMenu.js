@@ -8,8 +8,8 @@ const HelpMenu = () => {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 15%;
-		height: 8%;
+		width: 72px;
+		height: 24px;
 		background: #303eff;
 		color: white;
 		text-decoration: none;
