@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
 export default class ParentSignup extends Component {
 	state = {
@@ -49,7 +50,7 @@ export default class ParentSignup extends Component {
 
   render() {
     return (
-			<div>
+			<ParentSignupContainerDiv>
 				{this.state.secondSignupPage === 0 ? 
 					<form onSubmit={this.onSubmit}>
 						<input
@@ -126,7 +127,14 @@ export default class ParentSignup extends Component {
 						<button>Submit!</button>
 					</form>
 					}
-			</div>
+			</ParentSignupContainerDiv>
     );
   }
 }
+
+const ParentSignupContainerDiv = styled.div`
+	display: flex;
+  flex-direction: column;
+  padding: 16px 8px;
+  height: 100vh;
+`;

@@ -50,7 +50,7 @@ export default class BusinessSignup extends Component {
     return (
 			<div>
 				<form onSubmit={this.onSubmit}>
-					<label for="fullName">Full Name</label>
+					<label htmlFor="fullName">Full Name</label>
 					<input
 						type="text"
 						name="fullName"
@@ -58,7 +58,7 @@ export default class BusinessSignup extends Component {
 						value={this.state.fullName}
 						onChange={this.handleInputChange}
 					/>
-					<label for="username">Email Address</label>
+					<label htmlFor="username">Email Address</label>
 					<input
 						type="text"
 						name="username"
@@ -66,7 +66,7 @@ export default class BusinessSignup extends Component {
 						value={this.state.username}
 						onChange={this.handleInputChange}
 					/>
-					<label for="username">Password</label>
+					<label htmlFor="username">Password</label>
 					<input
 						type="password"
 						name="password"
@@ -74,7 +74,7 @@ export default class BusinessSignup extends Component {
 						value={this.state.password}
 						onChange={this.handleInputChange}
 					/>
-					<label for="username">Confirm Password</label>
+					<label htmlFor="username">Confirm Password</label>
 					<input
 						type="password"
 						name="passwordConfirm"
@@ -82,7 +82,7 @@ export default class BusinessSignup extends Component {
 						value={this.state.passwordConfirm}
 						onChange={this.handleInputChange}
 					/>
-					<label for="username">Name Or Business</label>
+					<label htmlFor="username">Name Or Business</label>
 					<input
 						type="text"
 						name="nameOrBusiness"
@@ -90,7 +90,7 @@ export default class BusinessSignup extends Component {
 						value={this.state.passwordConfirm}
 						onChange={this.handleInputChange}
 					/>
-					<label for="username">Number Of Volunteers</label>
+					<label htmlFor="username">Number Of Volunteers</label>
 					<input
 						type="text"
 						name="volunteerCount"
