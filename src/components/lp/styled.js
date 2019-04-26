@@ -36,7 +36,7 @@ export const LPContainer = styled.div`
           rgba(0, 0, 0, 0.54)
         ),
         url('${LPBackground}');
-      background-size: cover;
+      background-size: auto 114%;
       background-position: center;
       top: 0;
       left: 0;

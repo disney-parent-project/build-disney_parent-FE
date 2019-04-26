@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+ import React from 'react';
 import HelpMenu from '../common/HelpMenu';
 import logo from '../../assets/logo.png';
-import {LPContainer, LogoTitleWrapper, LogoContainer, SignInButtonWrapper, SignInButton, SecondParentSignInButton, SignUpButtonWrapper, SignUpButton, BusinessSignUpButton} from './LP_sc';
+import {LPContainer, LogoTitleWrapper, LogoContainer, SignInButtonWrapper, SignInButton, SecondParentSignInButton, SignUpButtonWrapper, SignUpButton, BusinessSignUpButton} from './styled';
 
-export default class Login extends Component {
-  render() {
+function Logo() {
+    return <img src={logo} alt="Logo" />
+}
 
-    function Logo() {
-      // Import result is the URL of your image
-      return <img src={logo} alt="Logo" />
-    }
-
+const LP = () => {
     return (
       <LPContainer>
         <HelpMenu/>
@@ -39,4 +36,5 @@ export default class Login extends Component {
       </LPContainer>
     );
   }
-}
+
+  export default LP;
