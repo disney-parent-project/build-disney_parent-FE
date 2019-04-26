@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LP from './components/lp/LP';
+import LP from './components/lp/landing_page';
 import Login from './components/login/Login';
 import ParentSignup from './components/signup/ParentSignup';
 import BusinessSignup from './components/signup/BusinessSignup';
