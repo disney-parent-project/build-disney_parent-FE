@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import LP from './components/lp/landing_page';
-import Login from './components/login/Login';
+import Login from './components/login/login';
 import ParentSignup from './components/signup/ParentSignup';
 import BusinessSignup from './components/signup/BusinessSignup';
-import ParentProfile from './components/profile/ParentProfile';
+import ParentProfile from './components/profile/parent_profile';
 import Requests from './components/requests/Requests';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
