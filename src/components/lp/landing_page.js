@@ -1,5 +1,5 @@
  import React from 'react';
-import HelpMenu from '../common/HelpMenu';
+import HelpMenu from '../common/help_menu';
 import logo from '../../assets/logo.png';
 import {LPContainer, LogoTitleWrapper, LogoContainer, SignInButtonWrapper, SignInButton, SecondParentSignInButton, SignUpButtonWrapper, SignUpButton, BusinessSignUpButton} from './styled';
 
